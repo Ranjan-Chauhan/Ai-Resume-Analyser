@@ -31,7 +31,9 @@ AI Resume Analyzer extracts key skills from resumes and recommends relevant job 
 - React.js, Tailwind CSS
 - Node.js, Express.js
 - MongoDB, Adzuna API
-- Gemini Api: for parsing Resume
+
+## AI Used
+- Gemini: For parsing Resume
 
 ## License
 MIT License
