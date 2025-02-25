@@ -33,7 +33,7 @@ AI Resume Analyzer extracts key skills from resumes and recommends relevant job 
 - MongoDB, Adzuna API
 
 ## AI Used
-- Gemini: For parsing Resume
+- Gemini : For parsing Resume
 
 ## License
 MIT License
