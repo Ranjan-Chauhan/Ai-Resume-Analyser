@@ -4,6 +4,8 @@ import axios from "axios";
 import { FaSpinner } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
+const baseUrl = import.meta.env.VITE_BASE_URL;
+
 const FileUpload = () => {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -33,19 +35,15 @@ const FileUpload = () => {
       setParsing(false);
       setMessage("");
 
-      const response = await axios.post(
-        "http://localhost:5000/api/v1/upload",
-        formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-          onUploadProgress: (progressEvent) => {
-            const percent = Math.round(
-              (progressEvent.loaded * 100) / progressEvent.total
-            );
-            setProgress(percent);
-          },
-        }
-      );
+      const response = await axios.post(`${baseUrl}/api/v1/upload`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+        onUploadProgress: (progressEvent) => {
+          const percent = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
+          setProgress(percent);
+        },
+      });
 
       console.log("res: ", response);
 
