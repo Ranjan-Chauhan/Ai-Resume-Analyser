@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router";
 import axios from "axios";
-import { FaSpinner } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { ImSpinner2 } from "react-icons/im";
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
@@ -103,8 +103,8 @@ const FileUpload = () => {
         {message && <p className="text-center">{message}</p>}
 
         {parsing && (
-          <div className="flex items-center space-x-2 text-green-600 text-lg font-semibold">
-            <FaSpinner className="animate-spin" size={20} />
+          <div className="flex items-center space-x-2 text-oran text-lg font-semibold">
+            <ImSpinner2 className="animate-spin text-pink-600" size={28} />
             <span>Parsing Resume...</span>
           </div>
         )}

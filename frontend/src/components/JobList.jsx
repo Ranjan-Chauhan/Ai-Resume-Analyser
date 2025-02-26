@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import fetchJobs from "../api/fetchJobs";
 import { useLocation } from "react-router";
-import { FaSpinner } from "react-icons/fa";
+import { ImSpinner2 } from "react-icons/im";
 
 const JobListings = () => {
   const location = useLocation();
@@ -25,13 +25,13 @@ const JobListings = () => {
 
   return (
     <div className="p-6 flex flex-col items-center">
-      <h2 className="text-3xl font-semibold mb-8">
-        Relevant Job Opportunities for You
+      <h2 className="text-3xl text-yellow-400 font-semibold mb-8">
+        Top Job Matches Based on Your Profile
       </h2>
 
       {loading ? (
-        <div className="flex items-center space-x-2 text-blue-600 text-lg font-semibold">
-          <FaSpinner className="animate-spin" size={20} />
+        <div className="flex items-center space-x-4 text-lg font-semibold">
+          <ImSpinner2 className="animate-spin text-blue-600" size={28} />
           <span>Fetching Jobs...</span>
         </div>
       ) : jobs.length === 0 ? (
