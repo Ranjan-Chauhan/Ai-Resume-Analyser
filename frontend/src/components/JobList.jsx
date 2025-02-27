@@ -26,7 +26,7 @@ const JobListings = () => {
   return (
     <div className="p-6 flex flex-col items-center">
       <h2 className="text-3xl text-yellow-400 font-semibold mb-8">
-        Top Job Matches Based on Your Profile
+        Top Jobs Matching Your Profile
       </h2>
 
       {loading ? (
@@ -37,7 +37,7 @@ const JobListings = () => {
       ) : jobs.length === 0 ? (
         <p>No jobs found. Try different skills or locations.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-4">
           {jobs.map((job) => (
             <div key={job.id} className="border p-4 rounded-lg shadow">
               <h3 className="text-lg font-bold">{job.title}</h3>

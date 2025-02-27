@@ -76,7 +76,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="p-6 rounded-lg w-full max-w-3xl mx-auto flex flex-col justify-center items-center space-y-4">
+    <div className="p-6 rounded-lg w-full max-w-[1280px] mx-auto flex flex-col justify-center items-center space-y-4">
       <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8">
         Upload Your Resume
       </h2>
@@ -112,84 +112,86 @@ const FileUpload = () => {
 
       {/* Showing REsume data */}
       {resumeData && (
-        <div className="mt-4 p-4 px-6 w-auto border-2 max-w-auto rounded-lg flex flex-col space-y-2">
-          <h3 className="text-xl sm:text-3xl text-lime-500 font-semibold mb-4 text-center">
-            Your Resume Summary
-          </h3>
+        <div className="w-[980px]">
+          <div className="mt-4 p-4 px-6 w-auto border-2 max-w-auto rounded-lg flex flex-col space-y-2">
+            <h3 className="text-xl sm:text-3xl text-lime-500 font-semibold mb-4 text-center">
+              Your Resume Summary
+            </h3>
 
-          <p className="text-start">
-            <strong>Name :</strong> {resumeData.candidateName}
-          </p>
-          <p className="text-start">
-            <strong>Email :</strong> {resumeData.contact.email}
-          </p>
-          <p className="text-start">
-            <strong>Phone :</strong> {resumeData.contact.phoneNumber}
-          </p>
+            <p className="text-start">
+              <strong>Name :</strong> {resumeData.candidateName}
+            </p>
+            <p className="text-start">
+              <strong>Email :</strong> {resumeData.contact.email}
+            </p>
+            <p className="text-start">
+              <strong>Phone :</strong> {resumeData.contact.phoneNumber}
+            </p>
 
-          {/* LinkedIn */}
-          <p className="text-start">
-            <strong>LinkedIn :</strong>{" "}
-            <Link
-              to={`https://${resumeData.linkedin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 break-all"
-            >
-              {resumeData.linkedin}
-            </Link>
-          </p>
+            {/* LinkedIn */}
+            <p className="text-start">
+              <strong>LinkedIn :</strong>{" "}
+              <Link
+                to={`https://${resumeData.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 break-all"
+              >
+                {resumeData.linkedin}
+              </Link>
+            </p>
 
-          {/* GitHub */}
-          <p className="text-start">
-            <strong>GitHub / Portfolio :</strong>{" "}
-            <Link
-              to={`https://${resumeData.portfolio}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 break-all"
-            >
-              {resumeData.portfolio}
-            </Link>
-          </p>
-          <p className="text-start">
-            <strong>Key Skills :</strong> {resumeData.keySkills.join(", ")}
-          </p>
+            {/* GitHub */}
+            <p className="text-start">
+              <strong>GitHub / Portfolio :</strong>{" "}
+              <Link
+                to={`https://${resumeData.portfolio}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 break-all"
+              >
+                {resumeData.portfolio}
+              </Link>
+            </p>
+            <p className="text-start">
+              <strong>Key Skills :</strong> {resumeData.keySkills.join(", ")}
+            </p>
 
-          {/* job Role */}
-          <p className="text-start">
-            <strong>Preferred Job Roles :</strong>{" "}
-            {resumeData.jobPreferences?.preferredJobRoles?.join(", ") || "Na"}
-          </p>
-          <p className="text-start">
-            <strong>Preferred Locations :</strong>{" "}
-            {resumeData.jobPreferences?.preferredLocations?.join(", ") || "Na"}
-          </p>
-          {/* <p className="text-start">
+            {/* job Role */}
+            <p className="text-start">
+              <strong>Preferred Job Roles :</strong>{" "}
+              {resumeData.jobPreferences?.preferredJobRoles?.join(", ") || "Na"}
+            </p>
+            <p className="text-start">
+              <strong>Preferred Locations :</strong>{" "}
+              {resumeData.jobPreferences?.preferredLocations?.join(", ") ||
+                "Na"}
+            </p>
+            {/* <p className="text-start">
             <strong>Preferred Industries :</strong>{" "}
             {resumeData.jobPreferences?.preferredIndustries?.join(", ") || "Na"}
           </p> */}
 
-          {/* Work exp */}
-          <h4 className="text-lg font-semibold">Work Experience</h4>
-          {resumeData.workExperience.map((exp, index) => (
-            <div
-              key={index}
-              className="flex space-x-2 border p-2.5 items-center rounded"
-            >
-              <p>
-                <strong>Company:</strong> {exp.companyName}
-              </p>
-              <p>
-                <strong>Role:</strong> {exp.jobTitle}
-              </p>
-              <p>
-                <strong>Duration:</strong> {exp.duration}
-              </p>
-            </div>
-          ))}
+            {/* Work exp */}
+            <h4 className="text-lg font-semibold">Work Experience</h4>
+            {resumeData.workExperience.map((exp, index) => (
+              <div
+                key={index}
+                className="flex space-x-2.5 border p-2.5 items-center rounded"
+              >
+                <p>
+                  <strong>Company:</strong> {exp.companyName}
+                </p>
+                <p>
+                  <strong>Role:</strong> {exp.jobTitle}
+                </p>
+                <p>
+                  <strong>Duration:</strong> {exp.duration}
+                </p>
+              </div>
+            ))}
 
-          {/* <h4 className="text-lg font-semibold">Education:</h4>
+            {/* <h4 className="text-lg font-semibold">Education:</h4>
           {resumeData.education.map((edu, index) => (
             <div key={index} className="border p-3 rounded">
               <p>
@@ -204,7 +206,7 @@ const FileUpload = () => {
             </div>
           ))} */}
 
-          {/* <h4 className="text-lg font-semibold">Projects:</h4>
+            {/* <h4 className="text-lg font-semibold">Projects:</h4>
           {resumeData.projects.map((project, index) => (
             <div key={index} className="border p-3 rounded">
               <p>
@@ -216,14 +218,15 @@ const FileUpload = () => {
             </div>
           ))} */}
 
-          {/* Button */}
-          <div className="flex justify-center items-center">
-            <button
-              onClick={handleViewJobs}
-              className="mt-4 bg-green-500 text-white px-4 py-2 flex justify-center items-center gap-3 rounded w-2/5 hover:bg-green-600"
-            >
-              View Relevant Jobs <FaArrowRight />
-            </button>
+            {/* Button */}
+            <div className="flex justify-center items-center">
+              <button
+                onClick={handleViewJobs}
+                className="mt-4 bg-green-500 text-white px-4 py-2 flex justify-center items-center gap-3 rounded w-2/5 hover:bg-green-600"
+              >
+                See Relevant Jobs <FaArrowRight />
+              </button>
+            </div>
           </div>
         </div>
       )}
