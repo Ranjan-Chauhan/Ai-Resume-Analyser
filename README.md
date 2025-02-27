@@ -7,10 +7,10 @@ AI Resume Analyzer extracts key skills from resumes and recommends relevant job 
 - Fetches job listings based on extracted skills.
 - Built with React, Node.js, and Express.
 
-## Live Link 
-   ```sh
-  Vercel: https://ai-resume-analyser-ten.vercel.app/
-   ```
+  ## Live Link 
+    ```sh
+     Vercel: https://ai-resume-analyser-ten.vercel.app/
+    ```
 
 ## Installation
 1. Clone the repository:  
