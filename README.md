@@ -9,7 +9,7 @@ AI Resume Analyzer extracts key skills from resumes and recommends relevant job 
 
 ## Project Live Link 
    ```sh
-   Vercel: https://ai-resume-analyser-ten.vercel.app/
+    https://ai-resume-analyser-ten.vercel.app/
    ```
      
 ## Installation
