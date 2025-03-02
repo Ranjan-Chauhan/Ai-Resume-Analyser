@@ -30,3 +30,21 @@
 // }
 
 // run();
+
+// .................... promtpt ...............
+
+//     const prompt = `You are an AI resume parser. Extract the following details from the provided resume text:
+
+//             1. Candidate Name
+//             2. Email
+//             3. Phone Number
+//             4. Key Skills (List only relevant technical and soft skills)
+//             5. Job Preferences (Extract preferred job roles, industries, and locations)
+//             6. Work Experience (Summarized job titles, company names, and duration)
+//             7. Education Details (Degree, University, Year)
+//             8. Certifications (If any)
+//             9. Projects (List notable projects)
+//             10. LinkedIn or Portfolio URL (If available)
+
+//         Resume:"${resumeText}"
+//         Return the extracted data in JSON format.`;

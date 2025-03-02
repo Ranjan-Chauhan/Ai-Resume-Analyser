@@ -4,7 +4,7 @@ import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
 import { ImSpinner2 } from "react-icons/im";
 
-const baseUrl = import.meta.env.VITE_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const FileUpload = () => {
   const [file, setFile] = useState(null);
@@ -35,7 +35,7 @@ const FileUpload = () => {
       setParsing(false);
       setMessage("");
 
-      const response = await axios.post(`${baseUrl}/api/v1/upload`, formData, {
+      const response = await axios.post(`${BASE_URL}/api/v1/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           const percent = Math.round(
@@ -216,7 +216,7 @@ const FileUpload = () => {
                 <strong>Description:</strong> {project.projectDescription}
               </p>
             </div>
-          ))} */}
+          ))}  */}
 
             {/* Button */}
             <div className="flex justify-center items-center">

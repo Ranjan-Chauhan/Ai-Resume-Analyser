@@ -1,11 +1,9 @@
 import axios from "axios";
-const apiKey = import.meta.env.VITE_APP_API_KEY;
-const appId = import.meta.env.VITE_APP_APP_ID;
+const apiKey = import.meta.env.VITE_API_KEY;
+const appId = import.meta.env.VITE_APP_ID;
 
 const fetchJobs = async (skills) => {
   try {
-    // const apiKey = import.meta.env.VITE_APP_API_KEY;
-    // const appId = import.meta.env.VITE_APP_APP_ID;
     // console.log("skill rec in fetch job:", skills);
 
     const formattedSkills = await skills.slice(0, 3).join(", ");
